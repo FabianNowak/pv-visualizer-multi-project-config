@@ -2,7 +2,7 @@
 Description=Mount sharedss bindfs mounts after reboot
 
 [Service]
-Type=simple
+Type=forking
 ExecStart=/opt/sharedss/mount-after-reboot.sh
 
 [Install]
