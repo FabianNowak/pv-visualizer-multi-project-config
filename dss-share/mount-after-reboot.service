@@ -1,0 +1,9 @@
+[Unit]
+Description=Mount sharedss bindfs mounts after reboot
+
+[Service]
+Type=simple
+ExecStart=/opt/sharedss/mount-after-reboot.sh
+
+[Install]
+WantedBy=multi-user.target

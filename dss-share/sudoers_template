@@ -1,0 +1,5 @@
+%lrz-user   ALL = (root:root) /opt/sharedss/mount-for-all.sh
+%lrz-user   ALL = (root:root) /opt/sharedss/allow-access.sh
+%lrz-user   ALL = (root:root) /opt/sharedss/revoke-access.sh
+%lrz-user   ALL = (root:root) /opt/sharedss/list-group.sh
+%lrz-user   ALL = (root:root) /opt/sharedss/unmount.sh
