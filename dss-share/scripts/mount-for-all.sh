@@ -60,7 +60,7 @@ wait_input "Changed ownership to $access_to_user:$groupname"
 echo "$dssdir" > "$sharedss_var_lib_mounts/$access_to_user" || check_error_and_cleanup $LINENO
 wait_input "Saved settings to $sharedss_var_lib_mounts/$access_to_user"
 
-sudo -u "$access_to_user" bindfs -g "$groupname" -p u+rx,g+rx --realistic-permissions "$dssdir" "$dir" || check_error_and_cleanup $LINENO
+sudo -u "$access_to_user" bindfs -g "$groupname" -p u=rx,g=rx,o= --realistic-permissions "$dssdir" "$dir" || check_error_and_cleanup $LINENO
 wait_input "Bound $dssdir subdirectory to $dir with access allowed for all users in group $groupname"
 
 echo "Success"

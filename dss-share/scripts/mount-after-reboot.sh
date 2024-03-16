@@ -9,6 +9,6 @@ for FILE in "$sharedss_var_lib_mounts"/*; do
     groupname=$(dss_access_group_of "$username")
     dir=$(sharedss_dir "$username")
     read -r dssdir<"$sharedss_var_lib_mounts/$username"
-    sudo -u "$username" bindfs -g "$groupname" -p u+rx,g+rx --realistic-permissions "$dssdir" "$dir"
+    sudo -u "$username" bindfs -g "$groupname" -p u=rx,g=rx,o= --realistic-permissions "$dssdir" "$dir"
   fi
 done
